@@ -1,0 +1,278 @@
+pt_PT
+This is a Portuguese dictionary for myspell:
+
+Copyright (C) 2006  Jose Joao de Almeida <jj@di.uminho.pt> , 
+	Rui Vilela <ruivilela@di.uminho.pt> ,
+	Alberto Simões <ambs@di.uminho.pt>
+
+Dep. Informatica, Universidade do Minho
+Portugal
+
+# All dictionary files and associated programs are currently covered
+     by the GPL and BSD licence
+
+########################################
+# GPL Licence:
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+
+
+########################################
+# BSD License:
+
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#      This product includes software developed by the University of
+#      California, Berkeley and its contributors.
+# 4. Neither the name of the authors mentioned above, nor 
+#    the names of its contributors
+#    may be used to endorse or promote products derived from this software
+#    without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+
+########################################
+
+To install : 
+    Find a suitable application that uses myspell dictionaries like
+    openoffice, mozilla, thunderbird. Use the program dictionary
+    application (if it has) for installing the dictionaries. 
+    For openoffice, you should make sure that the dictionary.lst
+    file has the following line:
+	  DICT pt PT pt_PT
+
+
+Latest versions, suggestions, information at
+	http://natura.di.uminho.pt/wiki/index.cgi?Dictionary
+===================================================
+pt_BR:
+Autor/Author: Raimundo Moura <raimundomoura@openoffice.org>
+
+pt-BR: Este dicionário está em desenvolvimento por Raimundo Moura e sua equipe. Ele está licenciado sob os termos da Licença Pública Geral Menor versão 2.1 (LGPLv2.1), como publicado pela Free Software Foundation. Os créditos estão disponíveis em http://www.broffice.org/creditos e você pode encontrar novas versões em http://www.broffice.org/verortografico.
+
+en-US: This dictionary is under development by Raimundo Moura and his team. It is licensed under the terms of the GNU Lesser General Public License version 2.1 (LGPLv2.1), as published by the Free Software Foundation. The credits are available at http://www.broffice.org/creditos and you can find new releases at http://www.broffice.org/verortografico.
+
+
+Copyright (C) 2006 - 2009 por/by Raimundo Santos Moura <raimundomoura@openoffice.org>
+
+=============
+APRESENTAÇÃO
+=============
+
+O Projeto Verificador Ortográfico do BrOffice.org é um projeto
+colaborativo desenvolvido pela comunidade Brasileira.
+A relação completa dos colaboradores deste projeto está em:
+http://www.broffice.org.br/creditos
+
+***********************************************************************
+* Este é um dicionário para correção ortográfica da língua Portuguesa *
+* para o Myspell.                                                     *
+* Este programa é livre e pode ser redistribuído e/ou modificado nos  *
+* termos da GNU Lesser General Public License (LGPL) versão 2.1.      *
+*                                                                     *
+***********************************************************************
+
+======================
+SOBRE ESTA ATUALIZAÇÃO
+======================
+
+. Alteração da regra 'B' para inclusão de plural para sufixos 'és'
+  Exemplo: viés - vieses;
+. Correção da regra 'a' para conjugação correta do verbo 'cuspir'.
+  Não estava contemplado 'cospem';
+. Correção da regra 'm' para verbos terminados em quir/guir nas formas de
+  ênclises e mesóclises
+. Inclusão do comando BREAK para permitir a verificação correta dos compostos;
+. Inclusão do comando MAXNGRAMSUGS para limitar o número de sugestões;
+. Atualização da regra REP melhorando as opções de sugestão;
+. Inclusão de 'hidrossanitário', colaboração de Gilmar Grespan;
+. Inclusão de 'tropeirismo', colaboração de Tiago Hillebrandt;
+. Correção da regra 'a' para verbos para inclusão de superlativos;
+. Inclusão de: marquetagem, lasqueira, esquerdopata, latinoide, colaboração Edson Costa;
+. Correção da regra de sugestões 'REP';
+. Inclusão de: sudoestino e Sanepar, colaboração Marcos Vinícius Piccinini   
+. Correção da conjugação de verbos nas formas de ênclises e mesóclises;
+. Inclusão de regras para composição de paises;
+. Inclusão das siglas dos partidos políticos brasileiros;
+. reforço do prefixo ex-; 
+. Inclusão de: precursoramente, neoconstitucionalismo, alopoiese, alopoiético,
+  autopoiético, BrOffice, paradoxização, programaticidade, sistemismo, comteano,
+  durkheimiano e luhmanniano. Colaboração Pablo Feitosa;
+. Exclusão de 'fundamenais'. Colaboração de João Paulo Vinha Bittar;
+  Judicialização.  Colaboração Pablo Feitosa;
+. Inclusão de: Judicialização, externaliza, externalizado, externalização, externalizei, etc.
+  Paradoxização, desparadoxização, procedimentalizar, procedimentalização , 
+  procedimentalizo, etc. Colaboração Pablo Feitosa;
+. Alterações no Divsilab. Colaboração Flavio Figueiredo Cardoso;
+. Aplicação das regras de prefíxo: sub, super, auto, re, inter, etc. na formação de novos
+  compostos.  
+. Inclusão de:  racistoide, melequento, burraldo, entregação, prum, pruns
+  (contração para+artigo), comezinha, yakuzá (máfia japonesa) e figuraça. 
+  Exclusão de: 'pãozinhos' no plural está incorreto. Colaboração de Edson Costa.
+. Inclusão de 'dimetilsulfato' e 'dietilsulfato'. Colaboração Luis Alcides Brandini De Boni;
+
+
+=======================================================
+COMO INSTALAR O VERIFICADOR BRASILEIRO NO BROFFICE.ORG
+=======================================================
+
+Copie os arquivos pt_BR.dic e pt_BR.aff para o diretório <BrOffice.org>
+/share/dict/ooo, onde <BrOffice.org> é o diretório em que o programa 
+foi instalado.
+
+No Windows, normalmente, o caminho é este: 
+C:\Arquivos de programas\BrOffice.org 2.0\share\dict\ooo, e no  Linux
+/opt/BrOffice.org/share/dict/ooo/.
+
+No mesmo diretório, localize o arquivo dictionary.lst. Abra-o com um
+editor de textos e acrescente a seguinte linha ao final(se não
+existir):
+
+DICT pt BR pt_BR
+
+É necessário reiniciar o BrOffice, inclusive o início rápido da versão
+para Windows que fica na barra de tarefas, para que o corretor
+funcione.
+
+===================
+DÚVIDAS FREQUENTES
+===================
+
+Os arquivos foram copiados mas o Verificador não está funcionando.
+O Verificador Ortográfico não deve estar configurado corretamente,
+isto pode estar ocorrendo por um dos seguintes motivos:
+
+1- O dicionário provavelmente não está instalado.
+
+Para se certificar de que está utilizando o idioma correto confira como
+estão as informações em: Ferramentas >> Opções >>   Configurações de
+Idioma >> Idiomas. O item Ocidental deve apresentar o dicionário
+selecionado (deve aparecer um logo "Abc" do lado do idioma).
+
+Se não estiver Português (Brasil) mude para esse idioma. Após
+configurado clique em 'OK'.
+Feche o BrOffice, inclusive o Iniciador Rápido,  e em seguida reabra-o;
+
+
+2 - O verificador não está configurado para verificar texto ao digitar.
+Neste caso confira como estão as informações em: 
+
+(Até a Versão 3.0.X)
+Ferramentas >> Opções>> Configurações de Idiomas >> Recursos de Verificação
+Ortográfica e, no campo opções deste formulário marque a opção 'Verificar 
+texto ao digitar';
+
+(Versão 3.1 em diante)
+Ferramentas >> Opções >> Configurações de Idiomas >> Recursos para redação e,
+no campo opções deste formulário marque a opção 'Verificar ortografia ao digitar
+
+
+Novas atualizações estarão disponíveis no site do BrOffice.Org, na
+página do Verificador Ortográfico.
+
+http://www.openoffice.org.br/?q=verortografico
+
+
+============
+INTRODUCTION
+============
+
+The BrOffice.org Orthography Checker is a colaborative project developed
+by the Brazilian community.
+The complete list of participants in this project is at
+http://www.broffice.org.br/creditos
+
+***********************************************************************
+* This is a dictionary for orthography correction for the Portuguese  *
+* language for Myspell.                                               *
+* This is a free program and it can be redistributed and/or           *
+* modified under the terms of the GNU Lesser General Public License   *
+* (LGPL) version 2.1.                                                 *
+*                                                                     *
+***********************************************************************
+
+=================
+ABOUT THIS UPDATE
+=================
+
+==============================================================
+HOW TO INSTALL THE BRAZILIAN ORTOGRAPH CHECKER IN BROFFICE.ORG
+==============================================================
+
+Copy the files pt_BR.dic and pt_BR.aff to the directory <BrOffice.org>
+/share/dict/ooo, where <BrOffice.org> is the directory where the software
+has been installed.
+
+In Windows, usually, the path is
+C:\Arquivos de programas\BrOffice.org 2.0\share\dict\ooo, and in GNU/Linux
+/opt/BrOffice.org/share/dict/ooo/.
+
+In the same directory, locate the file dictionary.lst. Open it with a
+text editor e add the following line to the end of the file (if it is
+not already there):
+
+DICT pt BR pt_BR
+
+It is necessary to restart BrOffice, including the fast start for the Windows version
+that resides on the task bar, in order to have the orthography checker to work.
+
+
+==========================
+FREQUENTLY ASKED QUESTIONS
+==========================
+
+The files have been copied but the checker is not working. The orthography checker may not be
+configured correctly, this may be due to one of the following reasons:
+
+1- The dictionary is probably not installed.
+
+To make sure that you are using the right language, check the information at
+Ferramentas >> Opções >>  Configurações de Idioma >> Idiomas.
+The item "Ocidental" must present the selected dictionary (a logo "Abc" should
+appear beside the language).
+If the language selected is not "Português (Brasil)" change to this language.
+After the configuration is correct, click on 'OK'.
+Close BrOffice and the fast start, and open it afterwards;
+
+2 - The checker is not configured to verify the orthography on typing. For this
+
+problem, check the information at
+"Ferramentas >> Opções >> Configurações de Idiomas >> Recursos de Verificação Ortográfica"
+and, in the field "Opções" of this form, check the option ''Verificar texto ao digitar';
+
+New updates will be available at the BrOffice.Org website, on the page of the
+Orthography Checker.
+
+http://www.broffice.org/verortografico
+

@@ -1,0 +1,342 @@
+# INSTEAD Snippets
+# Vim edition
+# ver.0.2
+# modified DEC11-2012 j-maks
+
+# Starting template
+snippet insteadbegin
+	-- $Name: ${1:Game name}$
+	-- $Author: ${2:j-maks}$
+	-- $Version: ${3:0.1}$
+	-- $E-mail: ${4:jmaksima_at_gmail_dot_com}$
+	-------------
+	instead_version "1.9.1";
+	-------------
+	game.codepage = ${5:"UTF-8"};
+	game.act = ${6:"Не получается."};
+	game.inv = ${7:"Гм... Странная штука."};
+	game.use = ${8:"Не сработает..."};
+	-------------
+	require "dbg"
+	require "dash"
+	require "quotes"
+	require "para"
+	-- require "nolife"
+	-- require "format"
+	-- require "click"
+	-- require "prefs"
+	-- require "counters"
+	-- require "wroom"
+	-- require "nolife"
+	-- require "proxymenu"
+	-- require "hotkeys"
+	-- require "fonts"
+	-- require "snapshots"
+	-- requrie "trigger"
+	-- require "keyboard"
+	-- require "cutscene"
+	-- require "kbd"
+	-- require "hideinv"
+	-- require "nouse"
+	-- require "timer"
+	-- require "xact"
+	-- require "sprites"
+	-- require "sound"
+	-- require "theme"
+	-------------
+	main = room { nam = "${9:-- room name}",
+		var {
+			${10:-- some room vars}
+		},
+		enter = function(s, f)
+			return ${11:-- enter doings} ;
+		end,
+		pic = ' ${12:-- loc of image file} ',
+		xdsc = ' ${13:-- xroom description} ',
+		dsc = [[ ${14:-- room description} ]],
+		act = function(s)
+			return ${15:-- some acts};
+		end,
+		obj = {
+			${16:-- some objs},
+		},
+		way = {
+			${17:-- some ways},
+		},
+		exit = function(s, t)
+			return	${18:-- exit doings} ;
+		end,
+	};${19}
+# break-line with -------
+snippet br
+	------------- ${1:}
+# One-letter snippets for rooms, objects, dialogs...
+snippet r
+	= room {	nam = "${1:-- room name}",
+		var {
+			seen, i = false, 0;
+			${2:-- some vars}
+		},
+		enter = function(s, f)
+			return ${3:-- enter doings};
+		end,
+		${4:-- pic on scene}pic = ' ${5} ',
+		${6:-- x description}xdsc = ' ${7} ',
+		dsc = function(s)
+			p [[ ${8:-- room desc} ]];
+		end,
+		act = function(s)
+			if s.seen then
+				p [[ ${10:-- some acts} ]];
+				s.seen = true;
+			else
+				return ${11};
+			end;
+			return ${12};
+		end,
+		${13}obj = {
+			${14:-- some objs,}
+		},
+		${15}way = {
+			${16:-- some ways,}
+		},
+		exit = function(s, t)
+			return ${17:-- exit doings};
+		end,
+	};${18}
+snippet o
+	= obj {		nam = "${1:-- obj name }",
+		var {
+			seen, i = false, 0;
+			${2:-- some vars,}
+		},
+		${3:-- pic of obj}pic = ' ${4} ',
+		${5:-- extra dsc}xdsc = [[${6}]],
+		dsc = function(s)
+			p [[ ${7:-- obj desc} ]];
+		end,
+		act = function (s, w)
+		${8}	if not s.seen then
+				p [[ ${9:-- some acts} ]]; s.seen = true;
+			elseif s.i > 2 then
+				p [[ ${10:-- more acts} ]]; s.i = s.i + 1;
+			elseif s.i < 4 then
+				p [[ ${11:-- and acts} ]]; s.i = s.i + 1;
+			else
+				p [[ ${12:-- last act} ]]; s.i = 0;
+		${13}	end;
+		end,
+		${14}tak = function(s, w)
+			${15}-- if ${16:-- Expression} then
+				-- ${17: Code}
+				-- else
+				-- end
+				-- p[[  ]];
+		${19}end,
+		inv = function(s)
+			p [[ ${20:-- inv memo} ]];
+		end,
+		${21}use = function(s, w)
+			${22}-- return ${23};
+			-- if ${24} then
+			-- else
+			-- end;
+		${25}end,
+		nouse = ' ${27:-- nouse reaction} ',
+		${28}obj = { ${29:-- some objs,}
+		};
+	};${30}
+snippet d
+	= dlg {
+		${1:-- Dialog}
+	};
+# Two-letter snippet for xroom
+snippet xr
+	= xroom {	nam = "${1:-- room name}",
+		var {
+			seen, i = false, 0;
+			${2:-- some vars}
+		},
+		enter = function(s, f)
+			return ${3:-- enter doings};
+		end,
+	${4:-- pic on scene}pic = ' ${5:-- path to file} ',
+	${6:-- extra desc}xdsc = ' ${7: -- txt} ',
+		dsc = function(s)
+			${8}p [[ ${9:-- room desc} ]];
+		end,
+		act = function(s)
+			if s.seen then
+				p [[ ${10:-- some acts} ]];
+				s.seen = true;
+			else
+				return ${11};
+			end;
+			return ${12};
+		end,
+	${13}obj = {
+			${14:-- objs,}
+		},
+	${15}way = {
+			${16:-- ways,}
+		},
+		exit = function(s, t)
+			return ${17:-- exit doings};
+		end,
+	};
+# Three-letter for player ;)
+snippet plr
+	= player {
+		nam = "${1:-- player name}",
+		var {
+			${2: --some vars}
+		},
+		where = '${3:-- where player is}',
+		obj = { ${4:-- some objs,} },
+	},
+# Stat and menu
+snippet stat
+	= stat {
+		${1:-- Stat}
+	};
+snippet menu
+	= menu {
+		${1:-- Menu}
+	};
+# Requires, dofiles, gamefiles
+snippet req
+	require "${1:Module}";${2}
+snippet df
+	dofile "${1:Filename}";${2}
+snippet gf
+	gamefile("${1:Filename}");${2}
+snippet dencf
+	doencfile("${1:Encoded file}");${2}
+# Init()
+snippet init
+	function init()
+		${1:-- Code}
+	end;
+# Snippets for texts in attributes
+snippet nam
+	nam = [[${1:Name}]],${2}
+snippet dsc
+	dsc = [[${1:Description}]],${2}
+snippet act
+	act = [[${1:Action text}]],${2}
+snippet use
+	use = [[${1:Use text}]],${2}
+snippet used
+	used = [[${1:Used text}]],${2}
+snippet enter
+	enter = [[${1:Enter text}]],${2}
+snippet entered
+	entered = [[${1:Entered text}]],${2}
+snippet exit
+	exit = [[${1:Exit text}]],${2}
+snippet left
+	left = [[${1:Left text}]],${2}
+snippet inv
+	inv = [[${1:Inventory text}]],${2}
+snippet tak
+	tak = [[${1:Take text}]],${2}
+snippet disp
+	disp = [[${1:Display text}]],${2}
+snippet pic
+	pic = [[${1:gfx/pic.png}]],${2}
+snippet xdsc
+	xdsc = [[${1:Description}]],${2}
+snippet life
+	life = [[${1:Life text}]],${2}
+snippet where
+	where = [[${1:Where room}]],${2}
+# Table-attributes
+snippet obj
+	obj = {
+		${1:-- Objects},
+	},
+snippet way
+	way = {
+		${1:-- Ways},
+	},
+snippet var
+	var {
+		${1:-- Variables},
+	},
+# Bool attributes
+snippet hinv
+	hideinv = true;${1}
+snippet fdsc
+	forcedsc = true;${1}
+# Funcions for attributes
+snippet func
+	= function()
+		${1:-- Code}
+	end,
+snippet fncs
+	= function(s)
+		${1:-- Code}
+	end,
+snippet fnst
+	= function(s, t)
+		${1:-- Code}
+	end,
+snippet fnsw
+	= function(s, w)
+		${1:-- Code}
+	end,
+# Basic function
+snippet fn
+	function ${1:Function_name} (${2:Params}){
+		${3:-- Code}
+	};
+# Dialog-related
+snippet phr
+	[${1:Number}] = phr(${2:You phrase}, ${3:Other phrase}, [[${4:Code}]]),${5}
+snippet _phr
+	[${1:Number}] = _phr(${2:You phrase}, ${3:Other phrase}, [[${4:Code}]]),${5}
+# Logic
+snippet if
+	if ${1:Expression} then
+		${2:Code};
+	end;${3}
+snippet ifend
+	if ${1:expression} then
+		${2:code};
+	elseif ${3:exp} then
+		${4:code};
+	else
+		${5:code};
+	end;${6}
+snippet ifel
+	if ${1:Expression} then
+		${2:Code};
+	else
+		${3:-- Code};
+	end;${4}
+snippet elif
+	elseif ${1:Expression} then
+		${2:-- Code}
+snippet elifend
+	elseif ${1:Expression} then
+		${2:-- Code}
+	end;${3}
+snippet ret
+	return ${1:True};
+# Other unsorted stuff...
+snippet xact
+	xact(${1:Name},[[ ${2:Text or code} ]]),${3}
+snippet p
+	p [[${1:Text}]];
+snippet code
+	code[[${1}]]${2}
+snippet vw
+	vway('${1:name}', '{${2:description}}', '${3:scene}');
+snippet vo
+	vobj('${1:name}', '{${2:disp}}');
+snippet click
+	click = function(s, x, y)
+		${1:-- Code}
+	end,
+snippet xw
+	xwalk(${1:room name})|${2:text link} ${3}
