@@ -240,7 +240,7 @@ if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme inkpot
+    colorscheme inkpoted
     set guitablabel=%M%t
     set lines=40
     set columns=115
@@ -267,11 +267,11 @@ else
    "set railscasts colorscheme when running vim in gnome terminal
     if $COLORTERM == 'gnome-terminal'
         set term=gnome-256color
-        colorscheme inkpot
+        colorscheme inkpoted
     else
        if $TERM == 'xterm'
             set term=xterm-256color
-            colorscheme inkpot
+            colorscheme inkpoted
         else
             colorscheme default
         endif
