@@ -15,6 +15,9 @@ set nocompatible
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+"allow background dark for theme kalisi
+set background=dark
+
 "store lots of :cmdline history
 set history=1000
 
@@ -26,8 +29,9 @@ set hlsearch    "hilight searches by default
 
 set number      "add line numbers
 set showbreak=...
+set textwidth=76
+set dy=lastline
 set wrap linebreak nolist
-set textwidth=80
 
 set formatoptions-=o "dont continue comments when pushing o/O
 set formatoptions=cqt
@@ -240,14 +244,14 @@ if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme inkpoted
+    colorscheme blacksea
     set guitablabel=%M%t
     set lines=40
     set columns=115
 
    if has("gui_gnome")
         set term=gnome-256color
-        colorscheme inkpot
+        colorscheme blacksea
         set guifont=Monospace\ Bold\ 12
     endif
 
@@ -267,16 +271,18 @@ else
    "set railscasts colorscheme when running vim in gnome terminal
     if $COLORTERM == 'gnome-terminal'
         set term=gnome-256color
-        colorscheme inkpoted
+        colorscheme blacksea
     else
        if $TERM == 'xterm'
             set term=xterm-256color
-            colorscheme inkpoted
+            colorscheme blacksea
         else
-            colorscheme default
+            colorscheme kalisi
         endif
     endif
 endif
+
+let g:airline_theme='kalisi'
 
 " PeepOpen uses <Leader>p as well so you will need to redefine it so something
 " else in your ~/.vimrc file, such as:
